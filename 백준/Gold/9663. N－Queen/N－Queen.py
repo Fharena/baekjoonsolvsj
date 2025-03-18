@@ -29,3 +29,5 @@ def dfs(row):
 # 0행부터 탐색 시작
 dfs(0)
 print(result)
+
+##  pypy3로 제출해야 처리 방식 차이로 정답 가능. python3로 채점시 비트 마스킹등의 상당한 최적화가 필요함

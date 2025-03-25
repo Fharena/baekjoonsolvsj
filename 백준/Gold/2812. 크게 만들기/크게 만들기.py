@@ -20,3 +20,7 @@ print(''.join(stack[:N-k]))
 
 
 
+
+
+
+

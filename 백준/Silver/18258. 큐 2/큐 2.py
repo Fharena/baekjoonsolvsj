@@ -1,36 +1,32 @@
 import sys
-input = sys.stdin.readline
+input=sys.stdin.readline
 
-n = int(input())
-queue = []
-head = 0  # 큐의 앞을 가리키는 인덱스
-
+queue=[]
+head = 0
+n=int(input())
 for _ in range(n):
-    cmd = input().split()
-
-    if cmd[0] == "push":
-        queue.append(int(cmd[1]))
-
-    elif cmd[0] == "pop":
+    str=list(input().split())
+    if str[0]=="push":
+        queue.append(int(str[1]))
+    elif str[0]=="pop":
         if head == len(queue):
             print(-1)
         else:
             print(queue[head])
             head += 1
-
-    elif cmd[0] == "size":
-        print(len(queue) - head)
-
-    elif cmd[0] == "empty":
-        print(1 if head == len(queue) else 0)
-
-    elif cmd[0] == "front":
+    elif str[0]=="size":
+        print(len(queue)-head)
+    elif str[0]=="empty":
+        if head == len(queue):
+            print(1)
+        else:
+            print(0)
+    elif str[0]=="front":
         if head == len(queue):
             print(-1)
-        else:
+        else:    
             print(queue[head])
-
-    elif cmd[0] == "back":
+    elif str[0]=="back":
         if head == len(queue):
             print(-1)
         else:
